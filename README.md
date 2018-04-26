@@ -21,11 +21,11 @@ Lead Time   Probability
 4    10%
 
 ## Hypothesis or hypotheses before running the simulation:
-
+Please find the presentation slide for detail. We will update it once we optimize our work.
 
 
 ## Analytical Summary of your findings: (e.g. Did you adjust the scenario based on previous simulation outcomes?  What are the management decisions one could make from your simulation's output, etc.)
-
+Please find the presentation slide for detail. We will update it once we optimize our work.
 
 ## Instructions on how to use the program:
 Download and run the .py file
