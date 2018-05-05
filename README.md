@@ -1,6 +1,7 @@
 # Title: Random Inventory System Simulation
-
-## Team Member(s): Xiaozheng Hou, Yinan Ni, Siran Dai
+![alt text](https://bikeutah.org/wp-content/uploads/2017/04/Asset-1-1024x324.png)
+## Team Member(s):
+Xiaozheng Hou, Yinan Ni, Siran Dai
 
 
 # Monte Carlo Simulation Scenario & Purpose:
@@ -14,11 +15,6 @@ List and describe your simulation's variables of uncertainty (where you're using
 
 Daily demand ～ Normal distribution N(50, 52)
 Probability distribution of delivery lead time
-Lead Time   Probability
-1    10%
-2    50%
-3    30%
-4    10%
 
 ## Hypothesis or hypotheses before running the simulation:
 Please find the presentation slide for detail. We will update it once we optimize our work.
@@ -30,4 +26,10 @@ Please find the presentation slide for detail. We will update it once we optimiz
 ## Instructions on how to use the program:
 Download and run the .py file
 ## All Sources Used:
+https://translate.google.com/translate?sl=auto&tl=en&js=y&prev=_t&hl=en&ie=UTF-8&u=http%3A%2F%2Fxuewen.cnki.net%2FCJFD-GCXT200501023.html&edit-text=&act=url
 
+https://wenku.baidu.com/view/89425c0c52ea551810a6875b
+
+http://www.wanfangdata.com.cn/details/detail.do?_type=perio&id=wlkj200710013
+
+https://github.com/nikolausn/Final-project
