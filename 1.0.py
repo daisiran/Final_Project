@@ -13,10 +13,10 @@ class Order:
         self.gauss_coef = gauss_coef  # {"miu": 50, "theta":5}
 
     def order_fee(self, s1, a, n):
-        return self.per_order_fee;
+        return self.per_order_fee
 
     def loss_fee(self, s1, a, n):
-        return self.per_loss_fee * (n - s1 - a);
+        return self.per_loss_fee * (n - s1 - a)
 
     def storage_fee(self, s1, a, n):
         if s1 + a >= n:
@@ -77,18 +77,24 @@ class Manage:
         self.solution = []
 
     def addBicycle(self, per_order_fee, per_loss_fee, per_storage_fee, weight_choice_coef, gauss_coef):
-        bicycles.append(Order(per_order_fee, per_loss_fee, per_storage_fee, weight_choice_coef, gauss_coef))
+        self.bicycles.append(Order(per_order_fee, per_loss_fee, per_storage_fee, weight_choice_coef, gauss_coef))
 
+    #get the optimal solution (loop)
     def optimize(self, bicycle):
-        pass
+        # pass
+        for i in range(200):
+            for j in range(200):
+                bicycle.ordering(i,i,j)
         return (Q, s1, P)
 
     def globalSolution(self):
         pass
-        for i in range(len(bicycles)):
-            self.solution.append(self.optimize(bicycles[i]))
+        for i in range(len(self.bicycles)):
+            self.solution.append(self.optimize(self.bicycles[i]))
 
 
 if __name__ == "__main__":
     bicycle = Order(75, 50, 0.75, {"list": ['1', '2', '3', '4'], "weight": [1, 5, 3, 1]}, {"miu": 50, "theta": 5})
     bicycle.ordering(150, 150, 200)
+    manage  = Manage()
+    manage.addBicycle(75, 50, 0.75, {"list": ['1', '2', '3', '4'], "weight": [1, 5, 3, 1]}, {"miu": 50, "theta": 5})
