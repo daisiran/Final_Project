@@ -186,7 +186,6 @@ class Order:
 
         print(total_fee)
 
-
 class Manage:
 
     def __init__(self):
