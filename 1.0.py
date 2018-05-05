@@ -2,6 +2,8 @@
 import math
 import random
 
+
+
 class Order:
 
     def __init__(self, per_order_fee, per_loss_fee, per_storage_fee, weight_choice_coef, gauss_coef):
