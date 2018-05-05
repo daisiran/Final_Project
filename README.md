@@ -1,5 +1,5 @@
 # Title: Random Inventory System Simulation
-![alt text](http://blog.ohny.org/wp-content/uploads/BK-Citi-Bike-Warehouse_credit-Aaron-Naparstek1.jpg)
+![alt text](https://bikeutah.org/wp-content/uploads/2017/04/Asset-1-1024x324.png)
 ## Team Member(s): Xiaozheng Hou, Yinan Ni, Siran Dai
 
 
