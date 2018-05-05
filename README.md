@@ -15,11 +15,6 @@ List and describe your simulation's variables of uncertainty (where you're using
 
 Daily demand ～ Normal distribution N(50, 52)
 Probability distribution of delivery lead time
-Lead Time   Probability
-1    10%
-2    50%
-3    30%
-4    10%
 
 ## Hypothesis or hypotheses before running the simulation:
 Please find the presentation slide for detail. We will update it once we optimize our work.
@@ -36,3 +31,5 @@ https://translate.google.com/translate?sl=auto&tl=en&js=y&prev=_t&hl=en&ie=UTF-8
 https://wenku.baidu.com/view/89425c0c52ea551810a6875b
 
 http://www.wanfangdata.com.cn/details/detail.do?_type=perio&id=wlkj200710013
+
+https://github.com/nikolausn/Final-project
