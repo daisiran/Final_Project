@@ -93,6 +93,7 @@ class Manage:
             self.solution.append(self.optimize(self.bicycles[i]))
 
 
+
 if __name__ == "__main__":
     bicycle = Order(75, 50, 0.75, {"list": ['1', '2', '3', '4'], "weight": [1, 5, 3, 1]}, {"miu": 50, "theta": 5})
     bicycle.ordering(150, 150, 200)
