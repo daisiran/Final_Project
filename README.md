@@ -1,5 +1,5 @@
 # Title: Random Inventory System Simulation
-![alt text](http://www.bayridgebikes.com/wp-content/uploads/2013/10/IMG_36172-1140x760.jpg)
+![alt text](http://blog.ohny.org/wp-content/uploads/BK-Citi-Bike-Warehouse_credit-Aaron-Naparstek1.jpg)
 ## Team Member(s): Xiaozheng Hou, Yinan Ni, Siran Dai
 
 
