@@ -31,4 +31,8 @@ Please find the presentation slide for detail. We will update it once we optimiz
 ## Instructions on how to use the program:
 Download and run the .py file
 ## All Sources Used:
+https://translate.google.com/translate?sl=auto&tl=en&js=y&prev=_t&hl=en&ie=UTF-8&u=http%3A%2F%2Fxuewen.cnki.net%2FCJFD-GCXT200501023.html&edit-text=&act=url
 
+https://wenku.baidu.com/view/89425c0c52ea551810a6875b
+
+http://www.wanfangdata.com.cn/details/detail.do?_type=perio&id=wlkj200710013
