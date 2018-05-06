@@ -6,12 +6,14 @@ import numpy as np
 
 class Order:
 
-    def __init__(self, per_order_fee, per_loss_fee, per_cube_storage_fee, weight_choice_coef, gauss_coef):
-        self.per_order_fee = per_order_fee
-        self.per_loss_fee = per_loss_fee
-        self.per_cube_storage_fee = per_cube_storage_fee
-        self.weight_choice_coef = weight_choice_coef  # {"list":['1', '2', '3', '4'], "weight": [1, 5, 3, 1]}
-        self.gauss_coef = gauss_coef  # {"miu": 50, "theta":5}
+    def __init__(self, per_order_fee, per_loss_fee, per_cube_storage_fee, per_return_fee, weight_choice_coef, buy_gauss_coef, return_gauss_coef):
+        self.per_order_fee          = per_order_fee
+        self.per_loss_fee           = per_loss_fee
+        self.per_cube_storage_fee   = per_cube_storage_fee
+        self.per_return_fee         = per_return_fee
+        self.weight_choice_coef     = weight_choice_coef  # {"list":['1', '2', '3', '4'], "weight": [1, 5, 3, 1]}
+        self.buy_gauss_coef         = buy_gauss_coef  # [{"miu": 50, "theta":5}, {"miu": 50, "theta":5}, ...]
+        self.return_gauss_coef      = return_gauss_coef  # [{"miu": 5, "theta":5}, {"miu": 5, "theta":5}, ...]
 
     def order_fee(self, s1, a, n):
         """
@@ -34,6 +36,14 @@ class Order:
         """
         return self.per_loss_fee * (n - s1 - a)
 
+    def return_fee(self, num):
+        '''
+        calculate the loss of customer return
+        :param num: the number of bicycle customer return in a day.
+        :return: float
+        '''
+        return self.per_return_fee * num;
+
     def storage_fee(self, num):
         """
        storage fee
@@ -51,18 +61,30 @@ class Order:
         f3 = self.per_cube_storage_fee * cube_num
         return f3
 
+
     def weight_choice(self):
+        '''
+        simulate the delay time after ordering
+        :return: string
+        '''
         new_list = []
         for i, vals in enumerate(self.weight_choice_coef["list"]):
             new_list.extend(vals * self.weight_choice_coef["weight"][i])
         return random.choice(new_list)
 
-    def ordering(self, Q, s1, P):
+    def ordering(self, Q, s1, P,iterTimes):
         # s1 = Q
-        # d = Order.weight_choice(['1','2','3','4'],[1,5,3,1])
-
+        """
+       the process to calculate the total loss fee
+       :param Q: the number of products purchase each time
+       :param s1: the number of product in the morning
+       :param P: the minimum number of product for ordering, which means owner need to order products if the number of products is less than P
+       :param iterTimes:
+       :return: float
+       """
         avg_fee = 0
-        for times in range(500):
+        # iterTimes = 200
+        for times in range(iterTimes):
 
             total_fee = 0
             exp_day = [0]*5
@@ -71,7 +93,10 @@ class Order:
                 total_left = 0
                 for type in range(5):
 
-                    n = round(random.gauss(self.gauss_coef["miu"], self.gauss_coef["theta"]))
+                    n = round(random.gauss(self.buy_gauss_coef[type]["miu"], self.buy_gauss_coef[type]["theta"]))
+
+                    rt = round(random.gauss(self.return_gauss_coef[type]["miu"], self.return_gauss_coef[type]["theta"]))
+                    total_fee += self.return_fee(rt)
                     # print('n', n)
                     if day == exp_day[type]:
                         a = Q[type]
@@ -109,19 +134,22 @@ class Order:
                 # print('---------------------------')
             # print(total_fee)
             avg_fee += total_fee
-        print("avg:",avg_fee/500)
-        return avg_fee/500
+        print("avg:",avg_fee/iterTimes)
+        return avg_fee/iterTimes
+
 
 
 
 if __name__ == "__main__":
     # per_order_fee, per_loss_fee, per_storage_fee, weight_choice_coef, gauss_coef
-    bicycle = Order(75, 50, 100, {"list": ['1', '2', '3', '4'], "weight": [1, 5, 3, 1]}, {"miu": 50, "theta": 5})
-    # bicycle.ordering([150,100,120,160,180], [150,100,120,160,180],[200,160,180,180,200])
+    bicycle = Order(75, 50, 100, 10, {"list": ['1', '2', '3', '4'], "weight": [1, 5, 3, 1]},\
+        [{"miu": 50, "theta": 5}, {"miu": 30, "theta": 5}, {"miu": 40, "theta": 5}, {"miu": 50, "theta": 5}, {"miu": 30, "theta": 5}],\
+        [{"miu": 10, "theta": 2}, {"miu": 8, "theta": 2}, {"miu": 9, "theta": 2}, {"miu": 7, "theta": 2}, {"miu": 5, "theta": 2}])
 
     minFee = 1e10
     bicycleNum = 5
-    # provide 50 different plans randomly
+    print('----------------------------------------------------------')
+    iterate_time = int(input('How many times do you want to iterate?'))
     for times in range(50):
         P = np.random.randint(100,200, bicycleNum)
         s1 = np.random.randint(100,200, bicycleNum)
@@ -130,14 +158,8 @@ if __name__ == "__main__":
         mins1 = tuple(s1)
         minQ = tuple(Q)
 
-        nowFee = bicycle.ordering(P, s1, Q)
+        nowFee = bicycle.ordering(P, s1, Q,iterate_time)
         if (nowFee < minFee):
             minFee = nowFee
             print(minFee)
             print("P:", minP, "s1:", mins1, "Q", minQ)
-
-
-
-
-
-
