@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
+# -*- coding: utf-8
 import math
 import random
-
+import numpy as np
 
 
 class Order:
@@ -113,47 +113,28 @@ class Order:
         return avg_fee/500
 
 
-# class Manage:
-#
-#     def __init__(self):
-#         self.bicycles = []
-#         self.solution = []
-#
-#     def addBicycle(self, per_order_fee, per_loss_fee, per_storage_fee, weight_choice_coef, gauss_coef):
-#         self.bicycles.append(Order(per_order_fee, per_loss_fee, per_storage_fee, weight_choice_coef, gauss_coef))
-#
-#     #get the optimal solution (loop)
-#     def optimize(self, bicycle):
-#         # pass
-#         cost_min = 100000000
-#
-#         for Q in range(100,250,10):
-#             for P in range(100,250,10):
-#                 cost = bicycle.ordering(Q,Q,P)
-#                 if cost < cost_min:
-#                     cost_min = cost
-#                     Q_optimal = Q
-#                     P_optimal = P
-#         print(cost_min,Q_optimal,P_optimal)
-#
-#         return (cost_min,Q_optimal, Q_optimal, P_optimal)
-#
-#     def globalSolution(self):
-#         pass
-#         for i in range(len(self.bicycles)):
-#             self.solution.append(self.optimize(self.bicycles[i]))
-
-
 
 if __name__ == "__main__":
-    #per_order_fee, per_loss_fee, per_storage_fee, weight_choice_coef, gauss_coef
+    # per_order_fee, per_loss_fee, per_storage_fee, weight_choice_coef, gauss_coef
     bicycle = Order(75, 50, 100, {"list": ['1', '2', '3', '4'], "weight": [1, 5, 3, 1]}, {"miu": 50, "theta": 5})
-    bicycle.ordering([150,100,120,160,180], [150,100,120,160,180],[200,160,180,180,200])
-    # manage  = Manage()
-    # manage.addBicycle(75, 50, 0.75, {"list": ['1', '2', '3', '4'], "weight": [1, 5, 3, 1]}, {"miu": 50, "theta": 5})
-    # manage.optimize(bicycle)
+    # bicycle.ordering([150,100,120,160,180], [150,100,120,160,180],[200,160,180,180,200])
 
+    minFee = 1e10
+    bicycleNum = 5
+    # provide 50 different plans randomly
+    for times in range(50):
+        P = np.random.randint(100,200, bicycleNum)
+        s1 = np.random.randint(100,200, bicycleNum)
+        Q = np.random.randint(150,200, bicycleNum)
+        minP = tuple(P)
+        mins1 = tuple(s1)
+        minQ = tuple(Q)
 
+        nowFee = bicycle.ordering(P, s1, Q)
+        if (nowFee < minFee):
+            minFee = nowFee
+            print(minFee)
+            print("P:", minP, "s1:", mins1, "Q", minQ)
 
 
 
