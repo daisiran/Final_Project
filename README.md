@@ -38,6 +38,7 @@ First, download and run the 'Final_version.py' file.
 Second, input iterate times and the number of types of bicycle.
 
 ## All Sources Used:
+- Miller & Ranum: Problem Solving with Algorithms and Data Structures Using Python, Section 3.4, pages 106-119
 - https://translate.google.com/translate?sl=auto&tl=en&js=y&prev=_t&hl=en&ie=UTF-8&u=http%3A%2F%2Fxuewen.cnki.net%2FCJFD-GCXT200501023.html&edit-text=&act=url
 - https://wenku.baidu.com/view/89425c0c52ea551810a6875b
 - http://www.wanfangdata.com.cn/details/detail.do?_type=perio&id=wlkj200710013
