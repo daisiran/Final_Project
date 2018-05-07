@@ -31,8 +31,8 @@ Based on our simulation, we found that
 Download and run the '1.0.py' file.
 
 ## All Sources Used:
-https://translate.google.com/translate?sl=auto&tl=en&js=y&prev=_t&hl=en&ie=UTF-8&u=http%3A%2F%2Fxuewen.cnki.net%2FCJFD-GCXT200501023.html&edit-text=&act=url
-https://wenku.baidu.com/view/89425c0c52ea551810a6875b
-http://www.wanfangdata.com.cn/details/detail.do?_type=perio&id=wlkj200710013
-https://github.com/nikolausn/Final-project
-https://seaborn.pydata.org/generated/seaborn.heatmap.html?highlight=heatmap#seaborn.heatmap
+- https://translate.google.com/translate?sl=auto&tl=en&js=y&prev=_t&hl=en&ie=UTF-8&u=http%3A%2F%2Fxuewen.cnki.net%2FCJFD-GCXT200501023.html&edit-text=&act=url
+- https://wenku.baidu.com/view/89425c0c52ea551810a6875b
+- http://www.wanfangdata.com.cn/details/detail.do?_type=perio&id=wlkj200710013
+- https://github.com/nikolausn/Final-project
+- https://seaborn.pydata.org/generated/seaborn.heatmap.html?highlight=heatmap#seaborn.heatmap
