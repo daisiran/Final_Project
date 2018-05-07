@@ -7,10 +7,14 @@ Doctest
 70
 >>> bike.loss_fee(10,20,40)
 200
+>>> bike.loss_fee(100,200,400)
+2000
 >>> bike.return_fee(1)
 10
 >>> bike.storage_fee(100)
 10
+>>> bike.storage_fee(2000)
+200
 """
 import math
 import random
