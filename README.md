@@ -15,7 +15,7 @@ In our first stage, we assumed that the warehouse have only one type of bicycle,
 After received feedbacks from the instructor and classmates, in the final stage, we decided to add the type of bicycles into our consideration as well as set the P(threshold of ordering) & Q(order amount) in a specific range based instead of some existing plans, which will make our scenario more realistic and applicable.
 
 ## Simulation's variables of uncertainty
-![alt text](https://photos-5.dropbox.com/t/2/AADFsRR_uLMTEvwYijbjFIhLHBkmDKnfvyxV1KczErmCzQ/12/1101823712/png/32x32/1/_/1/2/WX20180507-015247%402x.png/ELDEwLELGAMgAigC/o_PkdQYiKlbo8-ynDgXJJgMA41kov6_OAzhJCIIDBSM?preserve_transparency=1&size=2048x1536&size_mode=3)
+![alt text](https://github.com/daisiran/Final_Project/blob/master/Assumptions.png?raw=true)
 The random variable will be daily demand, arrival delay after order.
 List and describe your simulation's variables of uncertainty (where you're using pseudo-random number generation). For each such variable, how did you decide the range and probability distribution to use?  Do you think it's a good representation of reality?
 
