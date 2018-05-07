@@ -34,7 +34,7 @@ Based on the results of our simulation, we found out that hypothesis 1 & 2 are w
 For only one type of bicycle, we also make a heatmap visualization that can clearly see different value of cost under the different combinations of P & Q. For more than one type of bicycles, we were unable to visualize the result.
 ![alt text](https://github.com/daisiran/Final_Project/blob/master/Heatmap.png?raw=true)
 ## Instructions on how to use the program:
-First, download and run the '1.0.py' file.
+First, download and run the 'Final_version.py' file.
 Second, input iterate times and the number of types of bicycle.
 
 ## All Sources Used:
