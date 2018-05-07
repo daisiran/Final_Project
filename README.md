@@ -1,4 +1,4 @@
-# Title: Random Inventory System Simulation of a Bicycles Warehouse
+# Title: Random Inventory System Simulation
 ![alt text](https://bikeutah.org/wp-content/uploads/2017/04/Asset-1-1024x324.png)
 ## Team Member(s):
 Xiaozheng Hou, Yinan Ni, Siran Dai
@@ -9,7 +9,10 @@ In the process of supply, it is always necessary to maintain a certain inventory
 
 We believe that using Monte Carlo Simulation will help us to find the lowest expected loss strategy and solve this issue.
 
-So in our scenario, we will help the manager of a bicycles warehouse to , 
+So in our scenario, we will help the manager of a bicycles warehouse make the decision of choosing the best inventory strategy which yield the lowest cost.
+
+In our first stage, we assumed that the warehouse have only one type of bicycle, and we compared and simulated several existing plans and picked the one with the lowest cost.
+After received feedbacks from the instructor and classmates, in the final stage, we decided to add the type of bicycles into our consideration as well as set the P(threshold of ordering) & Q(order amount) in a specific range based instead of some existing plans, which will make our scenario more realistic and applicable.
 
 ## Simulation's variables of uncertainty
 The random variable will be daily demand, arrival delay after order.
@@ -19,13 +22,13 @@ Daily demand ～ Normal distribution N(50, 52)
 Probability distribution of delivery lead time
 
 ## Hypothesis or hypotheses before running the simulation:
-Hypothesis 1: , the manager believe there is no that will less than ******.
+Hypothesis 1: If there is only one type of bicycle, the manager believe that there is no inventory strategy that will yield the cost less than ******.
 
-Hypothesis 2: If there are 5 types of bicycles, the manager believe there is no that will less than 500000.
+Hypothesis 2: If there are 5 types of bicycles, the manager believe that there is no inventory strategy that will yield the cost less than ******.
 
 
 ## Analytical Summary of your findings: (e.g. Did you adjust the scenario based on previous simulation outcomes?  What are the management decisions one could make from your simulation's output, etc.)
-Based on our simulation, we found that 
+Based on our simulation, we found out that 
 
 ## Instructions on how to use the program:
 Download and run the '1.0.py' file.
