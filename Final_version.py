@@ -136,7 +136,7 @@ class Order:
                         s1[kind] = 0
 
                 total_fee += self.storage_fee(total_left)
-                # s1 = s2 the  amount of next morning before arrive product equals to the amount of product in the evening
+                # s1 = s2 the amount of next morning before arrive product equals to the amount of product in the evening
 
             avg_fee += total_fee
         # print("avg:",avg_fee/iterTimes)
@@ -153,9 +153,9 @@ if __name__ == "__main__":
     # bicycleNum = 5
     print('----------------------------------------------------------')
     iterate_time    = int(input('How many times do you want to iterate?'))
-    bicycleNum      = int(input('How many kinds of bicycle do you want to calculate?(Range in 1-5), we will give you a visualization when your input is 1.'))
+    bicycleNum      = int(input('How many kinds of bicycle do you want to calculate?(1-5), we will give you a visualization when your input is 1.'))
     while bicycleNum <1 or bicycleNum >5:
-        bicycleNum  = int(input('How many kinds of bicycle do you want to calculate?(Range in 1-5), we will give you a visualization when your input is 1.'))
+        bicycleNum  = int(input('How many kinds of bicycle do you want to calculate?(1-5), we will give you a visualization when your input is 1.'))
     print('Simulating......')
     P_l             = []
     Q_l             = []
@@ -190,4 +190,4 @@ if __name__ == "__main__":
         sns.heatmap(plotdata, cmap='rocket_r', vmax=250000)
         plt.show()
     print('MinFee:',minFee)
-    print("P:", nowP, "Q:", nowQ)
+    print("Best Strategy-----P:", nowP, "Q:", nowQ)
