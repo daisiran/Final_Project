@@ -19,16 +19,19 @@ After received feedbacks from the instructor and classmates, in the final stage,
 ## Simulation's variables of uncertainty
 ![alt text](https://github.com/daisiran/Final_Project/blob/master/Assumptions.png?raw=true)
 
-List and describe your simulation's variables of uncertainty (where you're using pseudo-random number generation). For each such variable, how did you decide the range and probability distribution to use?  Do you think it's a good representation of reality?
+We decide the range the probability distribution by gaining data from relevant papers as well as doing primary research(one of our team member's relative is a bicycle warehouse manager, we had a interview with him). Although we believe there're more factors that need to be taken into consideration, we are confident that our current simulation will be helpful in the manager's ordering strategy decision-making process.
+
 
 ## Hypothesis or hypotheses before running the simulation:
-Hypothesis 1: If there is only one type of bicycle, the manager believe that there is no inventory strategy that will yield the cost less than 110000.
+Hypothesis 1: If there is only one type of bicycle, the manager believe that there is no ordering strategy that will yield the cost less than 110000.
 
-Hypothesis 2: If there are 5 types of bicycles, the manager believe that there is no inventory strategy that will yield the cost less than 550000.
+Hypothesis 2: If there are 5 types of bicycles, the manager believe that there is no ordering strategy that will yield the cost less than 550000.
 
 
 ## Analytical Summary of your findings: (e.g. Did you adjust the scenario based on previous simulation outcomes?  What are the management decisions one could make from your simulation's output, etc.)
-Based on our simulation, we found out that 
+Based on the results of our simulation, we found out that hypothesis 1 & 2 are wrong. There is at least 1 ordering strategy that will yield the cost less than the manager's expectation. 
+
+For only one type of bicycle, we also make a heatmap visualization that can clearly see different value of cost under the different combinations of P & Q. For more than one type of bicycles, we were unable to visualize the result.
 ![alt text](https://github.com/daisiran/Final_Project/blob/master/Heatmap.png?raw=true)
 ## Instructions on how to use the program:
 First, download and run the '1.0.py' file.
