@@ -22,7 +22,7 @@ List and describe your simulation's variables of uncertainty (where you're using
 ## Hypothesis or hypotheses before running the simulation:
 Hypothesis 1: If there is only one type of bicycle, the manager believe that there is no inventory strategy that will yield the cost less than 110000.
 
-Hypothesis 2: If there are 5 types of bicycles, the manager believe that there is no inventory strategy that will yield the cost less than 520000.
+Hypothesis 2: If there are 5 types of bicycles, the manager believe that there is no inventory strategy that will yield the cost less than 550000.
 
 
 ## Analytical Summary of your findings: (e.g. Did you adjust the scenario based on previous simulation outcomes?  What are the management decisions one could make from your simulation's output, etc.)
