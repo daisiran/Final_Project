@@ -23,9 +23,9 @@ We decide the range the probability distribution by gaining data from relevant p
 
 
 ## Hypothesis or hypotheses before running the simulation:
-Hypothesis 1: If there is only one type of bicycle, the manager believe that there is no ordering strategy that will yield the cost less than 110000.
+Hypothesis 1: If there is only one type of bicycle, the manager believe that there is no ordering strategy that will yield the cost less than 120000.
 
-Hypothesis 2: If there are 5 types of bicycles, the manager believe that there is no ordering strategy that will yield the cost less than 550000.
+Hypothesis 2: If there are 5 types of bicycles, the manager believe that there is no ordering strategy that will yield the cost less than 600000.
 
 
 ## Analytical Summary of your findings: (e.g. Did you adjust the scenario based on previous simulation outcomes?  What are the management decisions one could make from your simulation's output, etc.)
