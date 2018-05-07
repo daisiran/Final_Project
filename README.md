@@ -16,23 +16,21 @@ After received feedbacks from the instructor and classmates, in the final stage,
 
 ## Simulation's variables of uncertainty
 ![alt text](https://github.com/daisiran/Final_Project/blob/master/Assumptions.png?raw=true)
-The random variable will be daily demand, arrival delay after order.
+
 List and describe your simulation's variables of uncertainty (where you're using pseudo-random number generation). For each such variable, how did you decide the range and probability distribution to use?  Do you think it's a good representation of reality?
 
-Daily demand ～ Normal distribution N(50, 52)
-Probability distribution of delivery lead time
-
 ## Hypothesis or hypotheses before running the simulation:
-Hypothesis 1: If there is only one type of bicycle, the manager believe that there is no inventory strategy that will yield the cost less than ******.
+Hypothesis 1: If there is only one type of bicycle, the manager believe that there is no inventory strategy that will yield the cost less than 110000.
 
-Hypothesis 2: If there are 5 types of bicycles, the manager believe that there is no inventory strategy that will yield the cost less than ******.
+Hypothesis 2: If there are 5 types of bicycles, the manager believe that there is no inventory strategy that will yield the cost less than 520000.
 
 
 ## Analytical Summary of your findings: (e.g. Did you adjust the scenario based on previous simulation outcomes?  What are the management decisions one could make from your simulation's output, etc.)
 Based on our simulation, we found out that 
 
 ## Instructions on how to use the program:
-Download and run the '1.0.py' file.
+First, download and run the '1.0.py' file.
+Second, input iterate times and the number of types of bicycle.
 
 ## All Sources Used:
 - https://translate.google.com/translate?sl=auto&tl=en&js=y&prev=_t&hl=en&ie=UTF-8&u=http%3A%2F%2Fxuewen.cnki.net%2FCJFD-GCXT200501023.html&edit-text=&act=url
