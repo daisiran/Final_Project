@@ -27,7 +27,7 @@ Hypothesis 2: If there are 5 types of bicycles, the manager believe that there i
 
 ## Analytical Summary of your findings: (e.g. Did you adjust the scenario based on previous simulation outcomes?  What are the management decisions one could make from your simulation's output, etc.)
 Based on our simulation, we found out that 
-
+![alt text](https://github.com/daisiran/Final_Project/blob/master/Heatmap%20of%20costs.png?raw=true)
 ## Instructions on how to use the program:
 First, download and run the '1.0.py' file.
 Second, input iterate times and the number of types of bicycle.
