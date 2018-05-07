@@ -130,13 +130,14 @@ class Order:
                         # print('loss_fee', total_fee)
                     if(s1[kind]+a-n > 0):
                         total_left += s1[kind]+a-n
+                        # the amount of next morning before arrive product equals to the amount of product in the evening
                         s1[kind] = s1[kind]+a-n
 
                     else:
                         s1[kind] = 0
 
                 total_fee += self.storage_fee(total_left)
-                # s1 = s2 the amount of next morning before arrive product equals to the amount of product in the evening
+                
 
             avg_fee += total_fee
         # print("avg:",avg_fee/iterTimes)
@@ -164,7 +165,7 @@ if __name__ == "__main__":
         P           = np.random.randint(0,500, bicycleNum)
         Q           = np.random.randint(60,500, bicycleNum)
         s1          = Q[:]
-        minP        = tuple(P)
+        minP        = tuple(P)     #change to tuple so that the value of P will not change.
         # mins1 = tuple(s1)
         minQ        = tuple(Q)
         nowFee      = bicycle.ordering(minQ,s1,minP,iterate_time)
