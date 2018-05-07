@@ -11,13 +11,13 @@ We believe that using Monte Carlo Simulation will help us to find the lowest exp
 
 So in our scenario, we will help the manager of a bicycles warehouse make the decision of choosing the best inventory strategy which yield the lowest cost.
 
-![alt text](https://github.com/daisiran/Final_Project/blob/master/Scenario.png?raw=true)
+![alt text](https://github.com/daisiran/Final_Project/blob/master/Scenario1.png?raw=true)
 
 In our first stage, we assumed that the warehouse have only one type of bicycle, and we compared and simulated several existing plans and picked the one with the lowest cost.
 After received feedbacks from the instructor and classmates, in the final stage, we decided to add the type of bicycles into our consideration as well as set the P(threshold of ordering) & Q(order amount) in a specific range based instead of some existing plans, which will make our scenario more realistic and applicable.
 
 ## Simulation's variables of uncertainty
-![alt text](https://github.com/daisiran/Final_Project/blob/master/Assumptions.png?raw=true)
+![alt text](https://github.com/daisiran/Final_Project/blob/master/Assumptions1.png?raw=true)
 
 We decide the range the probability distribution by gaining data from relevant papers as well as doing primary research(one of our team member's relative is a bicycle warehouse manager, we had a interview with him). Although we believe there're more factors that need to be taken into consideration, we are confident that our current simulation will be helpful in the manager's ordering strategy decision-making process.
 
