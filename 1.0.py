@@ -1,4 +1,21 @@
 # -*- coding: utf-8
+"""
+
+Doctest
+>>> bike = Order(70,20,10,10,{"list": ['1', '2', '3', '4'], "weight": [1, 5, 3, 1]},[{"miu": 50, "theta":5}], [{"miu": 5, "theta":5}])
+>>> bike.order_fee(10,20,10)
+70
+>>> bike.loss_fee(10,20,40)
+200
+>>> bike.loss_fee(100,200,400)
+2000
+>>> bike.return_fee(1)
+10
+>>> bike.storage_fee(100)
+10
+>>> bike.storage_fee(2000)
+200
+"""
 import math
 import random
 import numpy as np
@@ -42,7 +59,7 @@ class Order:
         :param num: the number of bicycle customer return in a day.
         :return: float
         '''
-        return self.per_return_fee * num;
+        return self.per_return_fee * num
 
     def storage_fee(self, num):
         """
@@ -142,8 +159,8 @@ class Order:
 
 if __name__ == "__main__":
     # per_order_fee, per_loss_fee, per_storage_fee, weight_choice_coef, gauss_coef
-    bicycle = Order(75, 50, 100, 10, {"list": ['1', '2', '3', '4'], "weight": [1, 5, 3, 1]},\
-        [{"miu": 50, "theta": 5}, {"miu": 30, "theta": 5}, {"miu": 40, "theta": 5}, {"miu": 50, "theta": 5}, {"miu": 30, "theta": 5}],\
+    bicycle = Order(75, 50, 100, 10, {"list": ['1', '2', '3', '4'], "weight": [1, 5, 3, 1]},
+        [{"miu": 50, "theta": 5}, {"miu": 30, "theta": 5}, {"miu": 40, "theta": 5}, {"miu": 50, "theta": 5}, {"miu": 30, "theta": 5}],
         [{"miu": 10, "theta": 2}, {"miu": 8, "theta": 2}, {"miu": 9, "theta": 2}, {"miu": 7, "theta": 2}, {"miu": 5, "theta": 2}])
 
     minFee = 1e10
