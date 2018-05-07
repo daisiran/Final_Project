@@ -18,6 +18,9 @@ Doctest
 import math
 import random
 import numpy as np
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
 
 
 class Order:
@@ -150,10 +153,10 @@ if __name__ == "__main__":
     # bicycleNum = 5
     print('----------------------------------------------------------')
     iterate_time    = int(input('How many times do you want to iterate?'))
-    bicycleNum      = int(input('How many kinds of bicycle do you want to calculate?(Range in 1-5)'))
+    bicycleNum      = int(input('How many kinds of bicycle do you want to calculate?(Range in 1-5), we will give you a visualization when your input is 1.'))
     while bicycleNum <1 or bicycleNum >5:
-        bicycleNum  = int(input('How many kinds of bicycle do you want to calculate?(Range in 1-5)'))
-
+        bicycleNum  = int(input('How many kinds of bicycle do you want to calculate?(Range in 1-5), we will give you a visualization when your input is 1.'))
+    print('Simulating......')
     P_l             = []
     Q_l             = []
     cost_l          = []
@@ -172,6 +175,19 @@ if __name__ == "__main__":
             minFee  = nowFee
             nowQ    = minQ
             nowP    = minP
-    # print('p:',P_l,'q',Q_l,'cost',cost_l)
+
+    # For only one type of bicycle, we can use 'heatmap' as a visualization of the cost based on our simulation
+    if bicycleNum ==1:
+        d = {'P': P_l, 'Q': Q_l, 'z': cost_l}
+        df = pd.DataFrame(data=d)
+        final = df[['z', 'P', 'Q']].groupby(['P', 'Q']).mean().reset_index()
+
+        plotdata = final.pivot('P', 'Q', 'z')
+        plt.figure(figsize=(10,10))
+        plt.ylabel('Q',size=18)
+        plt.xlabel('P',size=18)
+        plt.title('Heatmap of Cost under the combination of P & Q', size=20)
+        sns.heatmap(plotdata, cmap='rocket_r', vmax=250000)
+        plt.show()
     print('MinFee:',minFee)
     print("P:", nowP, "Q:", nowQ)
