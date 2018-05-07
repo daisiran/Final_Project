@@ -37,7 +37,6 @@ class Order:
         :param s1: the number of product in the morning
         :param a: the number of product which arrive in the morning
         :param n: the random amount of need
-        :param p: dinghuodian P
         :return: float
         """
         return self.per_order_fee
@@ -54,7 +53,7 @@ class Order:
 
     def return_fee(self, num):
         '''
-        calculate the loss of customer return
+        calculate the loss fee of customer return
         :param num: the number of bicycle customer return in a day.
         :return: float
         '''
@@ -62,11 +61,9 @@ class Order:
 
     def storage_fee(self, num):
         """
-       storage fee
-       :param s1: the number of product in the morning
-       :param a: the number of product which arrive in the morning
-       :param n: the random amount of need
-       :param s2:the number of product which left in the evening
+       calculate the storage fee for all bike.
+       One warehouse can store 100 bikes, and the price for rent one warehouse is 100.
+       :param num: the total number of product which left in the evening
        :return: float
        """
         if num>0:
@@ -95,7 +92,7 @@ class Order:
        :param Q: the number of products purchase each time
        :param s1: the number of product in the morning
        :param P: the minimum number of product for ordering, which means owner need to order products if the number of products is less than P
-       :param iterTimes:
+       :param iterTimes: times fot iterate
        :return: float
        """
         avg_fee = 0
@@ -152,29 +149,29 @@ if __name__ == "__main__":
     minFee = 1e10
     # bicycleNum = 5
     print('----------------------------------------------------------')
-    iterate_time = int(input('How many times do you want to iterate?'))
-    bicycleNum   = int(input('How many kinds of bicycle do you want to calculate?(Range in 1-5)'))
+    iterate_time    = int(input('How many times do you want to iterate?'))
+    bicycleNum      = int(input('How many kinds of bicycle do you want to calculate?(Range in 1-5)'))
     while bicycleNum <1 or bicycleNum >5:
-        bicycleNum = int(input('How many kinds of bicycle do you want to calculate?(Range in 1-5)'))
-    P_l     = []
-    Q_l     = []
-    cost_l  = []
+        bicycleNum  = int(input('How many kinds of bicycle do you want to calculate?(Range in 1-5)'))
+
+    P_l             = []
+    Q_l             = []
+    cost_l          = []
     for times in range(50):
-        P = np.random.randint(0,500, bicycleNum)
-        # s1 = np.random.randint(100,200, bicycleNum)
-        Q = np.random.randint(60,500, bicycleNum)
-        s1 = Q[:]
-        minP = tuple(P)
+        P           = np.random.randint(0,500, bicycleNum)
+        Q           = np.random.randint(60,500, bicycleNum)
+        s1          = Q[:]
+        minP        = tuple(P)
         # mins1 = tuple(s1)
-        minQ = tuple(Q)
-        P_l.append(minP[0])
-        Q_l.append(minQ[0])
-        nowFee = bicycle.ordering(minQ,s1,minP,iterate_time)
-        cost_l.append(nowFee)
+        minQ        = tuple(Q)
+        nowFee      = bicycle.ordering(minQ,s1,minP,iterate_time)
+        P_l         .append(minP[0])
+        Q_l         .append(minQ[0])
+        cost_l      .append(nowFee)
         if (nowFee < minFee):
-            minFee = nowFee
-            nowQ = minQ
-            nowP = minP
+            minFee  = nowFee
+            nowQ    = minQ
+            nowP    = minP
     # print('p:',P_l,'q',Q_l,'cost',cost_l)
     print('MinFee:',minFee)
     print("P:", nowP, "Q:", nowQ)
